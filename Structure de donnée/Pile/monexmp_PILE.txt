@@ -1,0 +1,63 @@
+
+*********************pile.h***********************
+
+#ifndef PILE_H_INCLUDED
+#define PILE_H_INCLUDED
+
+typedef struct MyPile{
+	
+	int Pile[50];
+	int taille;
+	int sommet;
+	
+}MyPile;
+
+
+#endif
+
+
+*********************main.c************************
+
+#include<stdio.h>
+#include "pile.h"
+
+void main(){
+
+	MyPile P1;
+	P1.taille=6;
+	P1.sommet=0;
+	int i;
+
+	//empiler
+	for(i=0;i<6;i++){
+		printf(" entrer la valeur de l'element %d : ",i+1);
+		scanf("%d",&P1.Pile[i]);
+	}
+	printf(" ***************l'affichage des element du tableau après l'empilement********************\n ");
+	
+
+	//depiler
+	for(i=5;i>=0;i--){
+		printf("%d",P1.Pile[i]);
+		printf("\t");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
